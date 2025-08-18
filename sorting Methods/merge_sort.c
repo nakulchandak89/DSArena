@@ -58,7 +58,7 @@ void printarr(int arr[], int size){
 }
 
 int main(){
-int arr[8];
+int arr[8]; 
 int size = 7;
 
 printf("Enter your array: ");
