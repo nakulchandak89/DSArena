@@ -1,8 +1,0 @@
-Algorithm       | Sorted Required?| Time Complexity (Worst)| Space| Best Use Case
-Linear Search   | ❌               | O(n)                   | O(1) | Small data or unsorted data
-Binary Search   | ✅               | O(log n)               | O(1) | Fast search in sorted arrays
-Fibonacci Search| ✅               | O(log n)               | O(1) | Sorted with block-based access
-Ternary Search  | ✅               | O(log n)               | O(1) | Function optimization problems
-Interpolation   | ✅ (uniform data)| O(n)                   | O(1) | Sorted & uniformly distributed data
-Exponential     | ✅               | O(log n)               | O(1) | Unknown-sized arrays
-

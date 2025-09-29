@@ -1,4 +1,5 @@
-#include<stdio.h>
+// quick_sort_no_stl.cpp
+#include <cstdio>
 
 void swap(int* a, int* b) {
     int temp = *a;
@@ -23,28 +24,31 @@ int partition(int arr[], int low, int high) {
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
-
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
     }
 }
 
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-}
-
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    printf("Original array: ");
-    printArray(arr, n);
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int* arr = new int[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Element %d: ", i);
+        scanf("%d", &arr[i]);
+    }
 
     quickSort(arr, 0, n - 1);
 
     printf("Sorted array: ");
-    printArray(arr, n);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    delete[] arr;
     return 0;
 }
